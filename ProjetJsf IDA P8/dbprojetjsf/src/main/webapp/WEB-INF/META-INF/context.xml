@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/YourDataSource" auth="Container"
+              type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+              username="etudiant" password="root"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/projetjsf?useSSL=false"/>
+              try {
+    Context initContext = new InitialContext();
+    Context envContext = (Context) initContext.lookup("java:/comp/env");
+    DataSource dataSource = jsf envContext.lookup("jdbc/YourDataSource");
+    Connection connection = jsf.getConnection();
+    // Utilisez la connexion...
+} catch (NamingException | SQLException e) {
+    e.printStackTrace();
+}
+              
+</Context>
+

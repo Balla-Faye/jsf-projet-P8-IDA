@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Student Input</title>
+</h:head>
+
+<h:body>
+    <h2>Student Input</h2>
+
+    <h:form>
+        <label for="studentName">Enter Student Name:</label>
+        <h:inputText id="studentName" value="#{studentManagedBean.studentName}" required="true" />
+        <br/>
+        <label for="studentEmail">Enter Student Email:</label>
+        <h:inputText id="studentEmail" value="#{studentManagedBean.studentEmail}" required="true" />
+        <br/>
+        <h:commandButton value="Add Student" action="#{studentManagedBean.addStudent}" />
+    </h:form>
+</h:body>
+
+</html>
